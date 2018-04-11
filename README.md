@@ -1,6 +1,19 @@
 # spring-data-tablestore 
 spring-data-xxx for aliyun(alibaba clound) tablestore(hbase like)
 
+
+clone, and run `mvnw install` to local.
+import  to your project
+```
+ <dependency>
+    <groupId>in.togetu</groupId>
+    <artifactId>spring-data-tablestore</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+ </dependency>    
+```
+
+
+
 # 1. build a entity looks like this
 
 ```
