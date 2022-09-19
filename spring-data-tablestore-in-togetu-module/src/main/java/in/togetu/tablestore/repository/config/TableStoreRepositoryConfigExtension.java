@@ -38,7 +38,7 @@ public class TableStoreRepositoryConfigExtension extends RepositoryConfiguration
 
     @Override
     protected Collection<Class<?>> getIdentifyingTypes() {
-        return Collections.<Class<?>> singleton(TableStoreRepository.class);
+        return Collections.<Class<?>>singleton(TableStoreRepository.class);
     }
 
     @Override
@@ -51,7 +51,7 @@ public class TableStoreRepositoryConfigExtension extends RepositoryConfiguration
     public void registerBeansForRoot(BeanDefinitionRegistry registry, RepositoryConfigurationSource configurationSource) {
         super.registerBeansForRoot(registry, configurationSource);
 
-        registerIfNotAlreadyRegistered(new RootBeanDefinition(TableStoreMappingContext.class), registry,
+        registerIfNotAlreadyRegistered(() -> new RootBeanDefinition(TableStoreMappingContext.class), registry,
                 "tableStoreMappingContext", configurationSource);
     }
 }

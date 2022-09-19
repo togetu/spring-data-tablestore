@@ -11,10 +11,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.OrderComparator;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.data.mapping.PersistentEntity;
-import org.springframework.data.repository.core.support.PersistableEntityInformation;
 import org.springframework.data.repository.core.support.PersistentEntityInformation;
 import org.springframework.util.StringUtils;
 
+import javax.persistence.Column;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -35,8 +35,6 @@ public class TableStoreEntityInformation<T, ID extends Key> extends PersistentEn
     private Map<String, ColumnType> columns;
 
     /**
-     * Creates a new {@link PersistableEntityInformation} for the given {@link PersistentEntity}.
-     *
      * @param entity must not be {@literal null}.
      */
     public TableStoreEntityInformation(PersistentEntity entity) {
@@ -53,7 +51,7 @@ public class TableStoreEntityInformation<T, ID extends Key> extends PersistentEn
         return entity;
     }
 
-    public String getEntityName(){
+    public String getEntityName() {
         return entityName;
     }
 
@@ -85,7 +83,7 @@ public class TableStoreEntityInformation<T, ID extends Key> extends PersistentEn
             if (p.isPrimaryIdProperty()) {
                 columnNames.put(p.getName(), p.getPrimaryId().name());
                 keyColumns.put(p.getName(), getColumnsType(p.getType()));
-            } else {
+            } else  {
                 columns.put(p.getName(), getColumnsType(p.getType()));
             }
         });

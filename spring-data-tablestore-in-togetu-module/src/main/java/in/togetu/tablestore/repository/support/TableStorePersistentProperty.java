@@ -1,6 +1,7 @@
 package in.togetu.tablestore.repository.support;
 
 import in.togetu.tablestore.repository.config.PrimaryId;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.Ordered;
 import org.springframework.data.mapping.Association;
 import org.springframework.data.mapping.PersistentEntity;
@@ -8,10 +9,13 @@ import org.springframework.data.mapping.model.AnnotationBasedPersistentProperty;
 import org.springframework.data.mapping.model.Property;
 import org.springframework.data.mapping.model.SimpleTypeHolder;
 
+import javax.persistence.Column;
+
 public class TableStorePersistentProperty<P extends TableStorePersistentProperty<P>> extends AnnotationBasedPersistentProperty<P>
         implements Ordered {
 
     private PrimaryId primaryId;
+    private Column column;
 
     /**
      * Creates a new {@link AnnotationBasedPersistentProperty}.
@@ -24,7 +28,7 @@ public class TableStorePersistentProperty<P extends TableStorePersistentProperty
         super(property, owner, simpleTypeHolder);
 
         primaryId = (PrimaryId) findAnnotation(PrimaryId.class);
-
+        column = (Column) findAnnotation(Column.class);
     }
 
     @Override
@@ -43,6 +47,14 @@ public class TableStorePersistentProperty<P extends TableStorePersistentProperty
 
     public PrimaryId getPrimaryId() {
         return primaryId;
+    }
+
+    @Override
+    public String getName() {
+        if (null != column && StringUtils.isNotEmpty(column.name())) {
+            return column.name();
+        }
+        return super.getName();
     }
 
     @Override
