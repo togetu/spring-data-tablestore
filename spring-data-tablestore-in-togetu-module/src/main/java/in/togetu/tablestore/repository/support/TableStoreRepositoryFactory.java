@@ -4,7 +4,7 @@ import com.alicloud.openservices.tablestore.AsyncClient;
 import com.alicloud.openservices.tablestore.AsyncClientInterface;
 import in.togetu.tablestore.repository.TableStoreRepository;
 import in.togetu.tablestore.repository.config.TableStoreClientConfig;
-import in.togetu.tscommon.config.AliyunProductConfig;
+import in.togetu.tablestore.repository.config.AliyunProductConfig;
 import org.springframework.data.mapping.context.MappingContext;
 import org.springframework.data.repository.core.EntityInformation;
 import org.springframework.data.repository.core.RepositoryInformation;
@@ -30,7 +30,7 @@ public class TableStoreRepositoryFactory extends RepositoryFactorySupport {
 
     @Override
     protected Object getTargetRepository(RepositoryInformation metadata) {
-        AliyunProductConfig tsConfig = clientConfig.getTsConfig();
+        AliyunProductConfig tsConfig = clientConfig.getAliyunProductConfig();
         AsyncClientInterface asyncClient = new AsyncClient(tsConfig.getEndpoint(), tsConfig.getAccessKey(),
                 tsConfig.getAccessSecret(), clientConfig.getInstanceName(), clientConfig.getClientConfiguration());
         // TODO Writer

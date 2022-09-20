@@ -1,33 +1,18 @@
-package in.togetu.tscommon.config;
+package in.togetu.tablestore.repository.config;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  *
  * @author jimmy jiang
  */
+@ConfigurationProperties(prefix = "tgtools.alibaba.tablestore")
 public class AliyunProductConfig {
 
-    private String product;
-    private String region;
     private String endpoint;
     private String accessKey;
     private String accessSecret;
 
-
-    public String getProduct() {
-        return product;
-    }
-
-    public void setProduct(String product) {
-        this.product = product;
-    }
-
-    public String getRegion() {
-        return region;
-    }
-
-    public void setRegion(String region) {
-        this.region = region;
-    }
 
     public String getEndpoint() {
         return endpoint;

@@ -1,0 +1,14 @@
+package in.togetu.tablestore.repository.config;
+
+import org.springframework.context.annotation.Bean;
+
+public class TgToolsTableStoreConfig {
+
+
+    @Bean
+    public AliyunProductConfig aliyunProductConfig() {
+        return new AliyunProductConfig();
+    }
+
+
+}
