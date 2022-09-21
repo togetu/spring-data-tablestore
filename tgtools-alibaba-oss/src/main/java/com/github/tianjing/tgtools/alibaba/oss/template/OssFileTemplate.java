@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.util.List;
 
-public interface FileTemplate {
+public interface OssFileTemplate {
 
     InputStream downloadStream(String pName) throws TgtoolsOssException;
 

@@ -3,7 +3,7 @@ package com.github.tianjing.tgtools.alibaba.oss.config;
 import com.aliyun.oss.ClientBuilderConfiguration;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
-import com.github.tianjing.tgtools.alibaba.oss.template.FileTemplate;
+import com.github.tianjing.tgtools.alibaba.oss.template.OssFileTemplate;
 import com.github.tianjing.tgtools.alibaba.oss.template.impl.OssFileTemplateImpl;
 import org.springframework.context.annotation.Bean;
 
@@ -17,7 +17,7 @@ public class OssTemplateConfig {
     }
 
     @Bean
-    public FileTemplate ossFileTemplate(AliyunOssTemplateConfig pAliyunProductConfig) {
+    public OssFileTemplate ossFileTemplate(AliyunOssTemplateConfig pAliyunProductConfig) {
         OssFileTemplateImpl vOssFileTemplateImpl = new OssFileTemplateImpl();
         vOssFileTemplateImpl.setOssClient(createClient(pAliyunProductConfig));
         vOssFileTemplateImpl.setBucketName(pAliyunProductConfig.getBucketName());

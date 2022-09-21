@@ -7,13 +7,13 @@ import com.aliyun.oss.model.OSSObject;
 import com.aliyun.oss.model.OSSObjectSummary;
 import com.aliyun.oss.model.ObjectListing;
 import com.github.tianjing.tgtools.alibaba.oss.exception.TgtoolsOssException;
-import com.github.tianjing.tgtools.alibaba.oss.template.FileTemplate;
+import com.github.tianjing.tgtools.alibaba.oss.template.OssFileTemplate;
 
 import java.io.*;
 import java.util.List;
 import java.util.UUID;
 
-public class OssFileTemplateImpl implements FileTemplate {
+public class OssFileTemplateImpl implements OssFileTemplate {
 
     protected OSS ossClient;
     protected String bucketName;
