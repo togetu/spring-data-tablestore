@@ -6,8 +6,8 @@ public class TgToolsTableStoreConfig {
 
 
     @Bean
-    public AliyunProductConfig aliyunProductConfig() {
-        return new AliyunProductConfig();
+    public AliyunTablestoreConfig aliyunTablestoreConfig() {
+        return new AliyunTablestoreConfig();
     }
 
 

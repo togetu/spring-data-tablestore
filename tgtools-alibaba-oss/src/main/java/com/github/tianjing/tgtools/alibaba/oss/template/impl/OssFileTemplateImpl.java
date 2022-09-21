@@ -16,8 +16,23 @@ import java.util.UUID;
 public class OssFileTemplateImpl implements FileTemplate {
 
     protected OSS ossClient;
-
     protected String bucketName;
+
+    public OSS getOssClient() {
+        return ossClient;
+    }
+
+    public void setOssClient(OSS ossClient) {
+        this.ossClient = ossClient;
+    }
+
+    public String getBucketName() {
+        return bucketName;
+    }
+
+    public void setBucketName(String bucketName) {
+        this.bucketName = bucketName;
+    }
 
     @Override
     public InputStream downloadStream(String pName) throws TgtoolsOssException {

@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author jimmy jiang
  */
 @ConfigurationProperties(prefix = "tgtools.alibaba.tablestore")
-public class AliyunProductConfig {
+public class AliyunTablestoreConfig {
 
     private String endpoint;
     private String accessKey;

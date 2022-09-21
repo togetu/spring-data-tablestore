@@ -19,8 +19,8 @@ public class TableStoreClientConfig {
     private boolean autoCreate;
 
     @Autowired
-    @Qualifier("aliyunProductConfig")
-    private AliyunProductConfig aliyunProductConfig;
+    @Qualifier("aliyunTablestoreConfig")
+    private AliyunTablestoreConfig aliyunTablestoreConfig;
 
     private ClientConfiguration clientConfiguration = new ClientConfiguration();
     private WriterConfig writerConfig = new WriterConfig();
