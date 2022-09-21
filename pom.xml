@@ -4,14 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.tianjing</groupId>
-    <artifactId>spring-data-tablestore-in-togetu</artifactId>
+    <artifactId>tgtools-alibaba</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>spring-data-tablestore-in-togetu-module</module>
-        <module>spring-data-tablestore-in-togetu-starter</module>
+        <module>tgtools-alibaba-oss</module>
     </modules>
-
 
 
 </project>
