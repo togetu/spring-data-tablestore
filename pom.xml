@@ -12,6 +12,7 @@
         <module>tgtools-alibaba-oss</module>
         <module>tgtools-alibaba-video</module>
         <module>tgtools-alibaba-sms</module>
+        <module>tgtools-alibaba-log</module>
     </modules>
 
 
