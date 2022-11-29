@@ -1,4 +1,4 @@
-package com.github.tianjing.tgtools.alibaba.oss.template.impl;
+package com.github.tianjing.tgtools.alibaba.video.template.impl;
 
 import com.aliyun.oss.ClientException;
 import com.aliyun.oss.OSS;
@@ -6,8 +6,8 @@ import com.aliyun.oss.OSSException;
 import com.aliyun.oss.model.OSSObject;
 import com.aliyun.oss.model.OSSObjectSummary;
 import com.aliyun.oss.model.ObjectListing;
-import com.github.tianjing.tgtools.alibaba.oss.exception.TgtoolsOssException;
-import com.github.tianjing.tgtools.alibaba.oss.template.OssFileTemplate;
+import com.github.tianjing.tgtools.alibaba.video.exception.TgtoolsOssException;
+import com.github.tianjing.tgtools.alibaba.video.template.OssFileTemplate;
 
 import java.io.*;
 import java.util.List;

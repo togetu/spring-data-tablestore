@@ -1,6 +1,6 @@
-package com.github.tianjing.tgtools.alibaba.oss.config.annotation;
+package com.github.tianjing.tgtools.alibaba.sms.config.annotation;
 
-import com.github.tianjing.tgtools.alibaba.oss.config.OssTemplateConfig;
+import com.github.tianjing.tgtools.alibaba.sms.config.AliSmsConfig;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 
 import java.lang.annotation.Documented;
@@ -10,6 +10,6 @@ import java.lang.annotation.Target;
 @Retention(value = java.lang.annotation.RetentionPolicy.RUNTIME)
 @Target(value = {java.lang.annotation.ElementType.TYPE})
 @Documented
-@ImportAutoConfiguration(value = {OssTemplateConfig.class})
-public @interface TgToolsEnableOssTemplate {
+@ImportAutoConfiguration(value = {AliSmsConfig.class})
+public @interface TgToolsEnableAliYunSms {
 }

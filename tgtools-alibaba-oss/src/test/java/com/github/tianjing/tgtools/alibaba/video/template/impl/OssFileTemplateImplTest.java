@@ -1,22 +1,29 @@
-package com.github.tianjing.tgtools.alibaba.oss.config;
+package com.github.tianjing.tgtools.alibaba.video.template.impl;
 
 import com.aliyun.oss.ClientBuilderConfiguration;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
-import com.github.tianjing.tgtools.alibaba.oss.template.OssFileTemplate;
-import com.github.tianjing.tgtools.alibaba.oss.template.impl.OssFileTemplateImpl;
-import org.springframework.context.annotation.Bean;
+import com.aliyun.oss.model.OSSObjectSummary;
+import com.github.tianjing.tgtools.alibaba.video.config.AliyunOssTemplateConfig;
+import com.github.tianjing.tgtools.alibaba.video.exception.TgtoolsOssException;
+import com.github.tianjing.tgtools.alibaba.video.template.OssFileTemplate;
 
-/**
- * @author jimmy jiang
- */
-public class OssTemplateConfig {
-    @Bean
-    public AliyunOssTemplateConfig aliyunOssTemplateConfig() {
-        return new AliyunOssTemplateConfig();
+import java.util.List;
+
+public class OssFileTemplateImplTest {
+
+    @org.junit.Test
+    public void list() throws TgtoolsOssException {
+        AliyunOssTemplateConfig config =new AliyunOssTemplateConfig();
+        config.setBucketName("");
+        config.setAccessKey("");
+        config.setAccessSecret("");
+        config.setEndpoint("");
+        OssFileTemplate vTemplate =  ossFileTemplate(config);
+        List<OSSObjectSummary> v= vTemplate.list("/upload");
+        System.out.println(v);
     }
 
-    @Bean
     public OssFileTemplate ossFileTemplate(AliyunOssTemplateConfig pAliyunProductConfig) {
         OssFileTemplateImpl vOssFileTemplateImpl = new OssFileTemplateImpl();
         vOssFileTemplateImpl.setOssClient(createClient(pAliyunProductConfig));

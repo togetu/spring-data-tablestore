@@ -10,6 +10,8 @@
     <modules>
         <module>spring-data-tablestore-in-togetu-module</module>
         <module>tgtools-alibaba-oss</module>
+        <module>tgtools-alibaba-video</module>
+        <module>tgtools-alibaba-sms</module>
     </modules>
 
 

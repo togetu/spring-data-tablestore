@@ -1,7 +1,7 @@
-package com.github.tianjing.tgtools.alibaba.oss.template;
+package com.github.tianjing.tgtools.alibaba.video.template;
 
 import com.aliyun.oss.model.OSSObjectSummary;
-import com.github.tianjing.tgtools.alibaba.oss.exception.TgtoolsOssException;
+import com.github.tianjing.tgtools.alibaba.video.exception.TgtoolsOssException;
 
 import java.io.File;
 import java.io.InputStream;
