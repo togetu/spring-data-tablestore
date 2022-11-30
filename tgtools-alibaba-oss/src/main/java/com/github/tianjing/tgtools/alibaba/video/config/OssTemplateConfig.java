@@ -8,7 +8,7 @@ import com.github.tianjing.tgtools.alibaba.video.template.impl.OssFileTemplateIm
 import org.springframework.context.annotation.Bean;
 
 /**
- * @author jimmy jiang
+ * @author
  */
 public class OssTemplateConfig {
     @Bean

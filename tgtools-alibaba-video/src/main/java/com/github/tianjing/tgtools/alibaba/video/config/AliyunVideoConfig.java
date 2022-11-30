@@ -4,7 +4,7 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * @author jimmy jiang
+ * @author
  */
 @Data
 @ConfigurationProperties(prefix = "tgtools.alibaba.video")
